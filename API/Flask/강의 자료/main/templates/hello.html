@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello page</title>
+</head>
+<body>
+    <div>
+        {% if username == "choi" %}
+            {% for i in range(5) %}
+                <h1>나 자신이야!</h1>
+            {% endfor %}
+        {% else %}
+            <h1>{{ username }}? 넌 누구니?</h1>
+        {% endif %}
+    </div>
+</body>
+</html>

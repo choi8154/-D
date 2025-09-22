@@ -1,0 +1,36 @@
+1일차 : Flakl 기초 웹 기본 이해
+2일차 : RestAPI
+3일차 :
+4일차 :
+5일차 :
+
+
+마이크로 = 완전 핵심 기능만 만든 기본 개념
+플라스크 탄생 개념 
+보틀에서 기원된 웹 프레임워크
+세팅이 쉬워서 Netflix, Reddit, Lyft, Linkedln
+
+1. 템플릿 엔진 Jinja2
+템플릿 엔진 : python에서 만든 데이터를 html에 끼워 넣어주는 도구
+flask는 기본적으로 jinja2를 사용
+{{변수명}} <- 변수 바인딩
+{% 제어문 %} <- 제어문
+flask에서 render_template()을 통해 .html파일과 데이터를 합쳐 최종 웹 페이지를 만들 수 있음
+
+- Flask 핵심 철학
+
+Simplicty (단순성)
+
+Flexibility (유연성)
+
+Explicitness (명시성)
+
+Developer Experience (DX)
+
+Jinja2 로 HTML에 데이터 삽입/제어문 활용 가능
+작고 가볍지만 기업단위에서 사용 간으하다
+
+
+과제 : 
+입력이 화면에 출력되는 웹앱 만들기
+HTML
