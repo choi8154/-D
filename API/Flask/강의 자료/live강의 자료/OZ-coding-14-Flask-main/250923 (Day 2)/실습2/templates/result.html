@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+
+{% block title %}설문 결과{% endblock %}
+
+{% blick content %}
+
+  <h2>설문 결과</h2>
+  <ul>
+    {% for i in answers%}
+    <li>{{ i }}</li>
+    {% endfor %}
+  </ul>
+
+{% endblick %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
