@@ -1,0 +1,4 @@
+write_log endpoint was accessed : 안녕하세요
+write_log endpoint was accessed : 성공입니다.
+write_log endpoint was accessed : 로그 자체를 기록할 방법이 없을까요?
+write_log endpoint was accessed : 잘모르겠네요.

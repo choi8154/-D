@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>WebSocket Test</title>
+</head>
+<body>
+  <h1>WebSocket Echo Test</h1>
+  
+  <input id="messageInput" type="text" placeholder="메시지를 입력하세요">
+  <button onclick="sendMessage()">보내기</button>
+
+  <ul id="messages"></ul>
+
+  <script>
+    // 서버와 연결
+    const socket = new WebSocket("ws://127.0.0.1:8000/ws");
+
+    socket.onopen = function() {
+      addMessage("✅ 서버와 연결됨!");
+    };
+
+    socket.onmessage = function(event) {
+      addMessage("📩 서버 응답: " + event.data);
+    };
+
+    socket.onclose = function() {
+      addMessage("❌ 서버와 연결 종료");
+    };
+
+    socket.onerror = function(error) {
+      addMessage("⚠️ 에러 발생: " + error.message);
+    };
+
+    function sendMessage() {
+      const input = document.getElementById("messageInput");
+      const message = input.value;
+      socket.send(message);
+      addMessage("➡️ 보낸 메시지: " + message);
+      input.value = "";
+    }
+
+    function addMessage(text) {
+      const li = document.createElement("li");
+      li.textContent = text;
+      document.getElementById("messages").appendChild(li);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ca886807-7926-4719-946b-18db140dddb1" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/../../진도/1. 사용법/main1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../진도/1. 사용법/main2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../진도/1. 사용법/main3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../진도/1. 사용법/main4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../진도/2. pydantic_model/main1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../진도/2. pydantic_model/main2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../진도/2. pydantic_model/main3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../진도/2. pydantic_model/main4(해야함.).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../진도/3. 응답모델/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../진도/3. 응답모델/main1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../진도/4. 응답 클래스/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../진도/5. 요청/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../진도/5. 요청/main1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../진도/6. 예외처리/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Flask/강의 자료/live강의 자료/OZ-coding-14-Flask-main/250925 (Day 4)/실습2/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Flask/강의 자료/live강의 자료/OZ-coding-14-Flask-main/250925 (Day 4)/실습4/templates/sentiment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Flask/강의 자료/녹화 강의/orrm/1강/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Flask/강의 자료/녹화 강의/orrm/1강/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Flask/강의 자료/녹화 강의/orrm/1강/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Flask/강의 자료/녹화 강의/orrm/1강/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Flask/강의 자료/녹화 강의/orrm/1강/routes/board.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Flask/강의 자료/녹화 강의/orrm/1강/routes/board.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Flask/강의 자료/녹화 강의/orrm/1강/routes/users.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../심화반 공부 정리/2차 수업(템플릿 메서드 패턴)/템플릿 메서드.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../심화반 공부 정리/2차 수업(템플릿 메서드 패턴)/템플릿 메서드.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="33OiFSTbEAJ30dgSZjn3P956tz7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/admin/Desktop/공부 정리/API/FastAPI/VOD/1일차 강의",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="1일차 강의" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-PY-252.26199.168" />
+        <option value="bundled-python-sdk-b3d66beaba9a-c6efb3732140-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26199.168" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="ca886807-7926-4719-946b-18db140dddb1" name="변경" comment="" />
+      <created>1759194415792</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1759194415792</updated>
+      <workItem from="1759194416962" duration="77000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -5,12 +5,13 @@ from models import User, Board
 
 app = Flask(__name__)
 
+# DB설정
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:dain8154@localhost/test'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
 
-# blueprint 설정
+# API문서화(Swagger)관련 설정
 app.config["API_TITLE"] = "My API"
 app.config["API_VERSION"] = "v1"
 app.config["OPENAPI_VERSION"] = "3.1.3"
@@ -21,13 +22,15 @@ app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-
 api = Api(app)
 
 from routes.board import board_blp
+from routes.user import user_blp
 
 api.register_blueprint(board_blp)
+api.register_blueprint(user_blp)
 
 from flask import render_template
 @app.route("/manage-boards")
 def manage_boards():
-    return render_template('borads.html')
+    return render_template('boards.html')
 
 @app.route('/manage-users')
 def manage_users():

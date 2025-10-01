@@ -22,7 +22,13 @@ class BoardList(MethodView):
             # print("id :", board.author.name)
             # print("id :", board.author.email)
 
-            return jsonify([{"id":board.id, "title":board.title, "name":board.author.name, "email":board.author.email}for board in boards])
+            return jsonify([{"id":board.id, 
+                             "title":board.title, 
+                             "content":board.content,
+                             "user_id":board.author.id,
+                             "author_name":board.author.name, 
+                             "author_email":board.author.email}
+                             for board in boards])
         
 
     def post(self):
