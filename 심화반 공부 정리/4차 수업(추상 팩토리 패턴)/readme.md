@@ -355,6 +355,10 @@ class PostgreSQLFactory(DBFactory):
 # 응용
 RPG나 하스스톤에서 같은 직군의 장비나 같은 속성의 카드를 착용하면 세트효과가 생기는 시스탬이 있음.  
 관련된 객체를 묶어서 관리하면 서로 다른 속성이 세트효과가 생기는 상황을 사전에 차단 가능하지 않을까해서 만들어보려고 했지만...
+
+<details>
+<summary>뭔가 애매한 추상 팩토리 패턴 응용</summary>
+
 ```py
 class 
 from abc import ABC, abstractmethod
@@ -416,6 +420,9 @@ apply_tribe_effect(DemonBuffFactory(), minions)
 print("\n=== 야생 버프 적용 ===")
 apply_tribe_effect(BeastBuffFactory(), minions)
 ```
+만들다 보니 이상해서 GPT에게 수정을 요청했지만 뭔가 더 애매해졌다...
+
+</details>
 
 <br>
 <br>
