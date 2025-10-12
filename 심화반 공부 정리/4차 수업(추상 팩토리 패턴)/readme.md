@@ -353,17 +353,17 @@ class PostgreSQLFactory(DBFactory):
 ```
 
 # 응용
-RPG나 하스스톤에서 같은 직군의 장비나 같은 속성의 카드를 착용하면 세트효과가 생기는 시스탬이 있음.  
-관련된 객체를 묶어서 관리하면 서로 다른 속성이 세트효과가 생기는 상황을 사전에 차단 가능하지 않을까해서 만들어보려고 했지만...
+RPG나 하스스톤에서 같은 직군의 장비나 같은 속성의 카드를 착용하면 세트 효과가 생기는 시스탬이 있음.  
+관련된 객체를 묶어서 관리하면 서로 다른 속성이 세트 효과가 생기는 상황을 사전에 차단 가능하지 않을까 해서 만들어보려고 했지만...
 
 <details>
-<summary>뭔가 애매한 추상 팩토리 패턴 응용</summary>
+<summary>추상 팩토리 패턴 응용</summary>
 
 ```py
 class 
 from abc import ABC, abstractmethod
 
-# 기본 카드 구조 (Product 계층)
+# Product 계층
 class Minion(ABC):
     def __init__(self, name, attack, tribe):
         self.name = name
@@ -420,7 +420,41 @@ apply_tribe_effect(DemonBuffFactory(), minions)
 print("\n=== 야생 버프 적용 ===")
 apply_tribe_effect(BeastBuffFactory(), minions)
 ```
-만들다 보니 이상해서 GPT에게 수정을 요청했지만 뭔가 더 애매해졌다...
+만들다 보니 이상해서 GPT에게 수정을 요청했지만 뭔가 더 애매해졌다...  
+그 이유는 추상 팩트리는 여러 종류의 관련 제품군을 만들어야 하지만 해당 팩토리는 Buff라는 하나의 제품만 만들이 때문이다.  
+이를 추상 팩토리 패턴으로 바꾸기 위해서는
+
+```py
+# Product 계층
+class Minion(ABC): ...
+class Spell(ABC): ...
+
+class DemonMinion(Minion): ...
+class DemonSpell(Spell): ...
+class BeastMinion(Minion): ...
+class BeastSpell(Spell): ...
+
+# 추상 팩토리
+class TribeFactory(ABC):
+    @abstractmethod
+    def create_minion(self): ...
+    @abstractmethod
+    def create_spell(self): ...
+
+# 구체 팩토리
+class DemonFactory(TribeFactory):
+    def create_minion(self):
+        return DemonMinion()
+    def create_spell(self):
+        return DemonSpell()
+
+class BeastFactory(TribeFactory):
+    def create_minion(self):
+        return BeastMinion()
+    def create_spell(self):
+        return BeastSpell()
+```
+이런식으로 하수인과 주문카드 제품군을 추상팩토리로 묶어서 하위에서 구현하도록 해야한다.
 
 </details>
 
@@ -430,10 +464,10 @@ apply_tribe_effect(BeastBuffFactory(), minions)
 
 # 내 생각
 >## 디자인 패턴에 대한 생각
-전략 패턴들을 공부하면서 왜 이런 패턴들을 굳이 정리한 책(Head First Design Patterns 같은)을 사람들이 읽는 걸까,
+전략 패턴들을 공부하면서 부터 왜 이런 패턴들을 굳이 정리한 책(Head First Design Patterns 같은)을 사람들이 읽는 걸까,
 처음엔 그 이유를 어렴풋이만 알았던 것 같다.
 
-그런데 디자인 패턴을 공부하고 Spring을 접하고 나서야 조금 감이 왔다. Java는 Python과 다르게 객체 간의 관계를 표현하는 데 제약이 많은 언어다.  
+그런데 팩토리 패턴을 공부하고 Spring의 존재를 알고 나서야 조금 감이 왔다. Java는 Python과 다르게 객체 간의 관계를 표현하는 데 제약이 많은 언어다.  
 Python은 동적 언어이기 때문에 pass로 빈 클래스를 선언하거나, 변수를 런타임 중에 동적으로 바꾸는 게 자유롭다.  
 즉, 객체를 만들거나 수정하는 게 훨씬 유연하다.
 

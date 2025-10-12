@@ -8,7 +8,7 @@ class UserData:
         self.token = None
         self.id = None
 
-    # ================== 회원가입
+    # 회원가입
     def signup(self):
         user_id = input("아이디를 입력하세요: ")
         if user_id in users:
@@ -19,7 +19,7 @@ class UserData:
         print("회원가입 성공!")
         return True
 
-    # ================== 로그인
+    # 로그인
     def login(self):
         user_id = input("아이디를 입력하세요: ")
         password = input("비밀번호를 입력하세요: ")
@@ -33,7 +33,7 @@ class UserData:
         print("로그인 성공! 발급된 토큰:", self.token)
         return self.token
 
-    # ================== 의존성 주입 흉내
+    # 의존성 주입
     def depend_func(self, func):
         def wrapper():
             # 토큰 없으면 로그인 다시
@@ -51,7 +51,7 @@ class UserData:
                 return func()
         return wrapper
 
-    # ================== 보호된 페이지
+    # 보호된 페이지
     @property
     def protected_page(self):
         @self.depend_func
@@ -59,7 +59,7 @@ class UserData:
             print(f"환영합니다 {self.id}님! 보호된 페이지에 접근했습니다.")
         return inner()
 
-# ================== 실행 흐름
+
 if __name__ == "__main__":
     user = UserData()
     while True:
