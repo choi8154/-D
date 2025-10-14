@@ -1,4 +1,5 @@
-from jwt_token import create_token, access_token, userdata
+from jwt_token import create_token, userdata
+from access_token import access_token
 
 # 간단한 유저 DB
 users = {}
@@ -7,6 +8,7 @@ class UserData:
     def __init__(self):
         self.token = None
         self.id = None
+        self.name = None
 
     # 회원가입
     def signup(self):
@@ -29,7 +31,7 @@ class UserData:
             return None
 
         self.id = user_id
-        self.token = create_token(user_id)
+        self.token = create_token(user_id, name)
         print("로그인 성공! 발급된 토큰:", self.token)
         return self.token
 
